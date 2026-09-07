@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\CircleSearch.Core\CircleSearch.Core.csproj" />
+    <ProjectReference Include="..\CircleSearch.Native\CircleSearch.Native.csproj" />
+    <ProjectReference Include="..\CircleSearch.Network\CircleSearch.Network.csproj" />
+    <ProjectReference Include="..\CircleSearch.UI\CircleSearch.UI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\icon.png" />
+    <Resource Include="Assets\icon.png" />
+    <Content Include="Assets\icon.ico" Condition="Exists('Assets\icon.ico')">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+
+    <!-- Вшивает иконку в сам .exe для отображения в Windows Explorer -->
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+
+    <AssemblyName>CircleSearch</AssemblyName>
+    <Product>Circle to Search for Windows</Product>
+    <Title>Circle to Search</Title>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+
+    <PublishSingleFile Condition="'$(Configuration)' == 'Release'">true</PublishSingleFile>
+    <SelfContained Condition="'$(Configuration)' == 'Release'">false</SelfContained>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile Condition="'$(SelfContained)' == 'true'">true</EnableCompressionInSingleFile>
+  </PropertyGroup>
+
+</Project>

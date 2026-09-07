@@ -1,0 +1,36 @@
+## Сборки и бинарники .NET
+[Bb]in/
+[Oo]bj/
+publish/
+publish-light/
+publish-standalone/
+*.exe
+*.dll
+*.pdb
+*.msi
+
+## Сохраняем ассеты проекта
+!src/CircleSearch.App/Assets/*.ico
+!src/CircleSearch.App/Assets/*.png
+
+## Visual Studio / JetBrains Rider / VS Code
+.vs/
+.idea/
+.vscode/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## WebView2 кэш и сессии Google (КРИТИЧНО: не пушить свои токены/куки!)
+**/CircleSearch/Profile/
+**/EBWebView/
+**/session_storage/
+**/Cookies*
+*.localstorage*
+
+## Логи и дампы разработки
+*.log
+*.dump
+project_dump.txt
+*.tmp

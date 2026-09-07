@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CircleSearch.App/CircleSearch.App.csproj" />
+    <Project Path="src/CircleSearch.Core/CircleSearch.Core.csproj" />
+    <Project Path="src/CircleSearch.Native/CircleSearch.Native.csproj" />
+    <Project Path="src/CircleSearch.Network/CircleSearch.Network.csproj" />
+    <Project Path="src/CircleSearch.UI/CircleSearch.UI.csproj" />
+  </Folder>
+</Solution>
