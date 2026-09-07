@@ -34,3 +34,6 @@ publish-standalone/
 *.dump
 project_dump.txt
 *.tmp
+
+setup_project.py
+*.py
